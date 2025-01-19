@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6672fa1f72658314d890abdb045d2644
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - SpiderScreech: {instanceID: 0}
+  - SpiderDeath: {instanceID: 0}
+  - SpiderFootstep: {fileID: 8300000, guid: dd97bde5b52fe784f9705b18213d5e70, type: 3}
+  - HatchlingFootstep: {fileID: 8300000, guid: f59ab488fca291e44970f615505ca032, type: 3}
+  - HatchlingExplosiveDeath: {instanceID: 0}
+  - HatchEgg: {instanceID: 0}
+  - CrouchWoosh: {fileID: 8300000, guid: 0c2effdb6cb989b4c88e32eab9c710f1, type: 3}
+  - TerrorAmbience: {instanceID: 0}
+  - BeingDetected: {fileID: 8300000, guid: 6e19c0b2fcbd57a458a261eb34bf4c6c, type: 3}
+  - BoatOnWater: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

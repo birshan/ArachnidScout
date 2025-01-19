@@ -110,8 +110,11 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
+        private PlayerProceduralAnimator _playerProceduralAnimator;
 
         private bool IsCurrentDeviceMouse
+
+        
         {
             get
             {
@@ -126,6 +129,7 @@ namespace StarterAssets
 
         private void Awake()
         {
+            _playerProceduralAnimator = GetComponent<PlayerProceduralAnimator>();
             // get a reference to our main camera
             if (_mainCamera == null)
             {
@@ -215,7 +219,13 @@ namespace StarterAssets
         private void Move()
         {
             // set target speed based on move speed, sprint speed and if sprint is pressed
-            float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+            // float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+            float targetSpeed = 0.0f;
+            if(_input.sprint && !_playerProceduralAnimator.IsCrouching()){
+                targetSpeed = SprintSpeed;
+            }else{
+                targetSpeed = MoveSpeed;
+            }
 
             // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -301,7 +311,8 @@ namespace StarterAssets
                 }
 
                 // Jump
-                if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+
+                if (!_playerProceduralAnimator.IsCrouching()&&_input.jump && _jumpTimeoutDelta <= 0.0f)
                 {
                     // the square root of H * -2 * G = how much velocity needed to reach desired height
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);

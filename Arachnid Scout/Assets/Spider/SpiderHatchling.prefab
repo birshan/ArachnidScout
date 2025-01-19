@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 808647283337103518}
   m_Layer: 0
   m_Name: Spider
-  m_TagString: Spider
+  m_TagString: Hatchling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,6 +249,7 @@ MonoBehaviour:
   FieldOfViewAngle: 170
   PlayerTransform: {fileID: 0}
   SpiderCanvas: {fileID: 7199342775737409459}
+  AwarenessFillImage: {fileID: 0}
 --- !u!195 &3177476466870072384
 NavMeshAgent:
   m_ObjectHideFlags: 0

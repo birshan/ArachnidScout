@@ -11,6 +11,9 @@ TagManager:
   - Egg
   - GameManager
   - Spider
+  - Hatchling
+  - Grass
+  - EggLocationCenter
   layers:
   - Default
   - TransparentFX
